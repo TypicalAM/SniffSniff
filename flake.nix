@@ -22,6 +22,7 @@
           cmakeFlags = oldAttrs.cmakeFlags or [ ] ++ [ "-DYARILO_BATTERY_SUPPORT=ON" ];
         });
         packages.YariloFrontend = pkgs.callPackage ./frontend { };
+        packages.YariloEnvoy = pkgs.callPackage ./envoy { };
 
         # Default package
         defaultPackage = packages.Yarilo;

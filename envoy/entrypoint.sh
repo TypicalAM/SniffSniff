@@ -5,4 +5,4 @@ if [ -z "$YARILO_ADDRESS" ]; then
 fi
 
 sed "s/address: 0\.0\.0\.0$/address: $YARILO_ADDRESS/" /app/envoy-original.yaml >/app/envoy.yaml
-/usr/local/bin/envoy $*
+/app/bin/envoy $*
